@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:js/js.dart';
 
-@JS('console.log') // annotates `log` function to call `console.log`
-external void log(dynamic str);
-@JS('xtremepush') // annotates xtremepush function to call xtremepush
-external void xtremepush(String event, String nameOfEvent);
+// @JS('console.log') // annotates `log` function to call `console.log`
+// external void log(dynamic str);
+// @JS('xtremepush') // annotates xtremepush function to call xtremepush
+// external void xtremepush(String event, String nameOfEvent);
 
 void main() {
   runApp(const MyApp());
-  log("Hello World from JavaScript");
-  xtremepush('event', 'test');
+  // log("Hello World from JavaScript");
+  // xtremepush('event', 'test');
 }
 
 class MyApp extends StatelessWidget {
