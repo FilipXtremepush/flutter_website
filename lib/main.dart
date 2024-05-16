@@ -40,6 +40,16 @@ void xpOpenInbox() {
   openInbox(target, action);
 }
 
+@JS('xtremepush')
+external void setSubscriptionStatus(
+    String action, String actionValue, bool value);
+// SetUser Wrapper Function
+void setSubscription(bool value) {
+  const String action = 'set';
+  const String actionValue = 'subscription';
+  setSubscriptionStatus(action, actionValue, value);
+}
+
 void main() {
   runApp(const MyApp());
   log("Hello World from JavaScript");
@@ -81,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _onButton2Pressed() {
-    setUser('FluffyCat');
+    setSubscription(true);
     print('Button 2 pressed: ${_controller2.text}');
     log('Button 2 has been pressed');
   }
