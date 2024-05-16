@@ -74384,7 +74384,9 @@ self.console.log("Button 1 has been pressed")},
 a23(){self.xtremepush("event","flutter_test","sample_payload")
 A.oa("Button 2 pressed: "+this.e.a.a)
 self.console.log("Button 2 has been pressed")},
-a25(){A.oa("Button 3 pressed: "+this.f.a.a)},
+a25(){self.xtremepush("set","user_id","filipflutter")
+A.oa("Button 3 pressed: "+this.f.a.a)
+self.console.log("Button 3 has been pressed")},
 O(a){var s,r,q=this,p=null
 q.a.toString
 s=A.l4("Xtremepush Flutter Demo",p,p,p,p,p,p)
