@@ -8,6 +8,8 @@ external void xtremepush(String event, String nameOfEvent);
 @JS('xtremepush') //
 external void xtremepushEventWithPayload(
     String event, String nameOfEvent, String payload);
+@JS('xtremepush')
+external void setUserId(String action, String field, String setValue);
 
 void main() {
   runApp(const MyApp());
@@ -56,7 +58,9 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _onButton3Pressed() {
+    setUserId('set', 'user_id', 'filipflutter');
     print('Button 3 pressed: ${_controller3.text}');
+    log('Button 3 has been pressed');
   }
 
   @override
