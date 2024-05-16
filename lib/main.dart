@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _onButton3Pressed() {
-    setTag("flutter_test_tag");
+    setTag("donkey_test_tag");
     print('Button 3 pressed: ${_controller3.text}');
     log('Button 3 has been pressed');
   }
