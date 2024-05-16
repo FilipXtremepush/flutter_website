@@ -74384,7 +74384,7 @@ self.console.log("Button 1 has been pressed")},
 a23(){self.xtremepush("event","flutter_test","sample_payload")
 A.oa("Button 2 pressed: "+this.e.a.a)
 self.console.log("Button 2 has been pressed")},
-a25(){self.xtremepush("donkey_test_tag")
+a25(){self.xtremepush("tag")("donkey_test_tag")
 A.oa("Button 3 pressed: "+this.f.a.a)
 self.console.log("Button 3 has been pressed")},
 O(a){var s,r,q=this,p=null
