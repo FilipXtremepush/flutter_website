@@ -74381,7 +74381,7 @@ A.zt.prototype={
 a21(){self.xtremepush("inbox","open")
 A.oa("Button 1 pressed: "+this.d.a.a)
 self.console.log("Button 1 has been pressed")},
-a23(){self.xtremepush("set","user_id","FluffyCat")
+a23(){self.xtremepush("set","subscription",!0)
 A.oa("Button 2 pressed: "+this.e.a.a)
 self.console.log("Button 2 has been pressed")},
 a25(){A.oa("Button 3 pressed: "+this.f.a.a)
