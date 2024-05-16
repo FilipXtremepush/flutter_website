@@ -74378,7 +74378,7 @@ A.vy.prototype={
 ak(){var s=$.ap()
 return new A.zt(new A.qd(B.hk,s),new A.qd(B.hk,s),new A.qd(B.hk,s),B.k)}}
 A.zt.prototype={
-a21(){self.xtremepush("set","email","heyhihello@welcome.com")
+a21(){self.xtremepush("inbox","message.list",10,10)
 A.oa("Button 1 pressed: "+this.d.a.a)
 self.console.log("Button 1 has been pressed")},
 a23(){self.xtremepush("set","subscription",!1)
