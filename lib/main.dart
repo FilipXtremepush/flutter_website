@@ -91,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _onButton2Pressed() {
-    setSubscription(true);
+    setSubscription(false);
     print('Button 2 pressed: ${_controller2.text}');
     log('Button 2 has been pressed');
   }
