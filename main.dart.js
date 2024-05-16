@@ -74381,7 +74381,9 @@ A.zt.prototype={
 a21(){self.xtremepush("event","flutter_test_event")
 A.oa("Button 1 pressed: "+this.d.a.a)
 self.console.log("Button 1 has been pressed")},
-a23(){A.oa("Button 2 pressed: "+this.e.a.a)},
+a23(){self.xtremepush("event","flutter_test","sample_payload")
+A.oa("Button 2 pressed: "+this.e.a.a)
+self.console.log("Button 2 has been pressed")},
 a25(){A.oa("Button 3 pressed: "+this.f.a.a)},
 O(a){var s,r,q=this,p=null
 q.a.toString
