@@ -9,7 +9,6 @@ external void xtremepush(String event, String nameOfEvent);
 void main() {
   runApp(const MyApp());
   log("Hello World from JavaScript");
-  xtremepush('event', 'flutter_test_event');
 }
 
 class MyApp extends StatelessWidget {
@@ -42,7 +41,9 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _controller3 = TextEditingController();
 
   void _onButton1Pressed() {
+    xtremepush('event', 'flutter_test_event');
     print('Button 1 pressed: ${_controller1.text}');
+    log('Button 1 has been pressed');
   }
 
   void _onButton2Pressed() {
