@@ -9,7 +9,13 @@ external void xtremepush(String event, String nameOfEvent);
 external void xtremepushEventWithPayload(
     String event, String nameOfEvent, String payload);
 @JS('xtremepush')
-external void setUserId(String action, String field, String setValue);
+external void setUserId(String action, String actionValue, String value);
+void setUser(String value) {
+  const String action = 'set';
+  const String actionValue = 'user_id';
+  setUserId(action, actionValue, value);
+}
+
 @JS('xtremepush')
 external void setTag(String action, String tagName, [String? tagValue]);
 // hit tag wrapper function
@@ -64,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _onButton2Pressed() {
-    xtremepushEventWithPayload('event', 'flutter_test', 'sample_payload');
+    setUser('FluffyCat');
     print('Button 2 pressed: ${_controller2.text}');
     log('Button 2 has been pressed');
   }
