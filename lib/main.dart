@@ -59,6 +59,16 @@ void setEmail(String value) {
   setEmailAddress(action, actionValue, value);
 }
 
+@JS('xtremepush')
+external void retrieveInboxList(
+    String action, String actionValue, int offset, int limit);
+// get Inbox List wrapper function
+void getInboxList(int offset, int limit) {
+  const String action = 'inbox';
+  const String actionValue = 'message.list';
+  retrieveInboxList(action, actionValue, offset, limit);
+}
+
 void main() {
   runApp(const MyApp());
   log("Hello World from JavaScript");
@@ -94,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _controller3 = TextEditingController();
 
   void _onButton1Pressed() {
-    setEmail('heyhihello@welcome.com');
+    getInboxList(10, 10);
     print('Button 1 pressed: ${_controller1.text}');
     log('Button 1 has been pressed');
   }
