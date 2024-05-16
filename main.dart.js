@@ -74378,7 +74378,7 @@ A.vy.prototype={
 ak(){var s=$.ap()
 return new A.zt(new A.qd(B.hk,s),new A.qd(B.hk,s),new A.qd(B.hk,s),B.k)}}
 A.zt.prototype={
-a21(){self.xtremepush("tag","multi_tag","another_one")
+a21(){self.xtremepush("open","inbox")
 A.oa("Button 1 pressed: "+this.d.a.a)
 self.console.log("Button 1 has been pressed")},
 a23(){self.xtremepush("set","user_id","FluffyCat")
