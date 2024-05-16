@@ -10,6 +10,7 @@ external void xtremepushEventWithPayload(
     String event, String nameOfEvent, String payload);
 @JS('xtremepush')
 external void setUserId(String action, String actionValue, String value);
+// SetUser Wrapper Function
 void setUser(String value) {
   const String action = 'set';
   const String actionValue = 'user_id';
@@ -24,9 +25,19 @@ void hitTag(String tagName) {
   setTag(action, tagName);
 }
 
+// hit tag with value wrapper function
 void hitTagWithValue(String tagName, String tagValue) {
   const String action = 'tag';
   setTag(action, tagName, tagValue);
+}
+
+@JS('xtremepush')
+external void xpOpenInbox(String action, String target);
+//open inbox wrapper function
+void openInbox(String action, String target) {
+  const String action = 'open';
+  const String target = 'inbox';
+  xpOpenInbox(action, target);
 }
 
 void main() {
