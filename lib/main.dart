@@ -5,6 +5,9 @@ import 'package:js/js.dart';
 external void log(dynamic str);
 @JS('xtremepush') // annotates xtremepush function to call xtremepush
 external void xtremepush(String event, String nameOfEvent);
+@JS('xtremepush') //
+external void xtremepushEventWithPayload(
+    String event, String nameOfEvent, String payload);
 
 void main() {
   runApp(const MyApp());
@@ -47,7 +50,9 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _onButton2Pressed() {
+    xtremepushEventWithPayload('event', 'flutter_test', 'sample_payload');
     print('Button 2 pressed: ${_controller2.text}');
+    log('Button 2 has been pressed');
   }
 
   void _onButton3Pressed() {
