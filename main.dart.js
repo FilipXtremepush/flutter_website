@@ -74378,14 +74378,13 @@ A.vy.prototype={
 ak(){var s=$.ap()
 return new A.zt(new A.qd(B.hk,s),new A.qd(B.hk,s),new A.qd(B.hk,s),B.k)}}
 A.zt.prototype={
-a21(){self.xtremepush("event","flutter_test_event")
+a21(){self.xtremepush("tag","multi_tag","another_one")
 A.oa("Button 1 pressed: "+this.d.a.a)
 self.console.log("Button 1 has been pressed")},
 a23(){self.xtremepush("event","flutter_test","sample_payload")
 A.oa("Button 2 pressed: "+this.e.a.a)
 self.console.log("Button 2 has been pressed")},
-a25(){self.xtremepush("tag")("donkey_test_tag")
-A.oa("Button 3 pressed: "+this.f.a.a)
+a25(){A.oa("Button 3 pressed: "+this.f.a.a)
 self.console.log("Button 3 has been pressed")},
 O(a){var s,r,q=this,p=null
 q.a.toString
