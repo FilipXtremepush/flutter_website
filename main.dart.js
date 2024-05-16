@@ -22863,8 +22863,7 @@ s.ax$!==$&&A.a3()
 s.ax$=m
 n=m}s.R5(new A.IR(p,B.G8,o,n,l))
 s.EH()
-self.console.log("Hello World from JavaScript")
-self.xtremepush("event","flutter_test_event")},
+self.console.log("Hello World from JavaScript")},
 Fz:function Fz(a){this.a=a},
 vy:function vy(a){this.a=a},
 zt:function zt(a,b,c,d){var _=this
@@ -74379,7 +74378,9 @@ A.vy.prototype={
 ak(){var s=$.ap()
 return new A.zt(new A.qd(B.hk,s),new A.qd(B.hk,s),new A.qd(B.hk,s),B.k)}}
 A.zt.prototype={
-a21(){A.oa("Button 1 pressed: "+this.d.a.a)},
+a21(){self.xtremepush("event","flutter_test_event")
+A.oa("Button 1 pressed: "+this.d.a.a)
+self.console.log("Button 1 has been pressed")},
 a23(){A.oa("Button 2 pressed: "+this.e.a.a)},
 a25(){A.oa("Button 3 pressed: "+this.f.a.a)},
 O(a){var s,r,q=this,p=null
