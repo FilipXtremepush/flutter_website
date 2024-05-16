@@ -66,7 +66,12 @@ external void retrieveInboxList(
 void getInboxList(int offset, int limit) {
   const String action = 'inbox';
   const String actionValue = 'message.list';
-  retrieveInboxList(action, actionValue, offset, limit);
+  try {
+    retrieveInboxList(action, actionValue, offset, limit);
+  } catch (e) {
+    log('an error occurred during retrieve inbox list');
+    print('An error occurred: $e');
+  }
 }
 
 void main() {
