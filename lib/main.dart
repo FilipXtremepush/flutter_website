@@ -34,7 +34,7 @@ void hitTagWithValue(String tagName, String tagValue) {
 @JS('xtremepush')
 external void xpOpenInbox(String action, String target);
 //open inbox wrapper function
-void openInbox(String action, String target) {
+void openInbox() {
   const String action = 'open';
   const String target = 'inbox';
   xpOpenInbox(action, target);
@@ -75,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _controller3 = TextEditingController();
 
   void _onButton1Pressed() {
-    hitTagWithValue('multi_tag', 'another_one');
+    openInbox();
     print('Button 1 pressed: ${_controller1.text}');
     log('Button 1 has been pressed');
   }
