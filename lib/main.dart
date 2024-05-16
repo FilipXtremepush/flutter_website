@@ -10,13 +10,18 @@ external void xtremepushEventWithPayload(
     String event, String nameOfEvent, String payload);
 @JS('xtremepush')
 external void setUserId(String action, String field, String setValue);
-@JS('xtremepush("tag")')
-external void setTag(String tagName);
+@JS('xtremepush')
+external void setTag(String action, String tagName, [String? tagValue]);
 // hit tag wrapper function
-// void hitTag(String tagName) {
-//   const String action = 'tag';
-//   setTag(action, tagName);
-// }
+void hitTag(String tagName) {
+  const String action = 'tag';
+  setTag(action, tagName);
+}
+
+void hitTagWithValue(String tagName, String tagValue) {
+  const String action = 'tag';
+  setTag(action, tagName, tagValue);
+}
 
 void main() {
   runApp(const MyApp());
@@ -53,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _controller3 = TextEditingController();
 
   void _onButton1Pressed() {
-    xtremepush('event', 'flutter_test_event');
+    hitTagWithValue('multi_tag', 'another_one');
     print('Button 1 pressed: ${_controller1.text}');
     log('Button 1 has been pressed');
   }
@@ -65,7 +70,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _onButton3Pressed() {
-    setTag("donkey_test_tag");
     print('Button 3 pressed: ${_controller3.text}');
     log('Button 3 has been pressed');
   }
