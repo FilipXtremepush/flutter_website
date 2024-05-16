@@ -43,11 +43,20 @@ void xpOpenInbox() {
 @JS('xtremepush')
 external void setSubscriptionStatus(
     String action, String actionValue, bool value);
-// SetUser Wrapper Function
+// setSubscription Wrapper Function
 void setSubscription(bool value) {
   const String action = 'set';
   const String actionValue = 'subscription';
   setSubscriptionStatus(action, actionValue, value);
+}
+
+@JS('xtremepush')
+external void setEmailAddress(String action, String actionValue, String value);
+// set Email Address Wrapper Function
+void setEmail(String value) {
+  const String action = 'set';
+  const String actionValue = 'email';
+  setEmailAddress(action, actionValue, value);
 }
 
 void main() {
@@ -85,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _controller3 = TextEditingController();
 
   void _onButton1Pressed() {
-    xpOpenInbox();
+    setEmail('heyhihello@welcome.com');
     print('Button 1 pressed: ${_controller1.text}');
     log('Button 1 has been pressed');
   }
