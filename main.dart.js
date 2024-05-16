@@ -22862,9 +22862,7 @@ m.VM(l,l,r)
 s.ax$!==$&&A.a3()
 s.ax$=m
 n=m}s.R5(new A.IR(p,B.G8,o,n,l))
-s.EH()
-self.console.log("Hello World from JavaScript")
-self.xtremepush("event","test")},
+s.EH()},
 Fz:function Fz(a){this.a=a},
 vy:function vy(a){this.a=a},
 zt:function zt(a,b,c,d){var _=this
