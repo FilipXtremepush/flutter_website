@@ -10,7 +10,7 @@ external void xtremepushEventWithPayload(
     String event, String nameOfEvent, String payload);
 @JS('xtremepush')
 external void setUserId(String action, String field, String setValue);
-@JS('xtremepush')
+@JS('xtremepush("tag")')
 external void setTag(String tagName);
 // hit tag wrapper function
 // void hitTag(String tagName) {
