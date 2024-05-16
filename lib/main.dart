@@ -32,13 +32,13 @@ void hitTagWithValue(String tagName, String tagValue) {
 }
 
 @JS('xtremepush')
-external void xpOpenInbox(String action, String target);
-//open inbox wrapper function
-void openInbox() {
-  const String action = 'open';
-  const String target = 'inbox';
-  xpOpenInbox(action, target);
-}
+external void openInbox();
+// //open inbox wrapper function
+// void openInbox() {
+//   const String action = 'open';
+//   const String target = 'inbox';
+//   xpOpenInbox(action, target);
+// }
 
 void main() {
   runApp(const MyApp());
