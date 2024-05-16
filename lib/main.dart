@@ -32,13 +32,13 @@ void hitTagWithValue(String tagName, String tagValue) {
 }
 
 @JS('xtremepush')
-external void openInbox();
-// //open inbox wrapper function
-// void openInbox() {
-//   const String action = 'open';
-//   const String target = 'inbox';
-//   xpOpenInbox(action, target);
-// }
+external void openInbox(String action, String target);
+//open inbox wrapper function
+void xpOpenInbox() {
+  const String action = 'open';
+  const String target = 'inbox';
+  openInbox(action, target);
+}
 
 void main() {
   runApp(const MyApp());
@@ -75,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _controller3 = TextEditingController();
 
   void _onButton1Pressed() {
-    openInbox();
+    xpOpenInbox();
     print('Button 1 pressed: ${_controller1.text}');
     log('Button 1 has been pressed');
   }
